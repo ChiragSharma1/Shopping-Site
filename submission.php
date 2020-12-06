@@ -109,9 +109,10 @@ include('auth.php');
       // echo "</a></tr>";
       // echo "<br>";
       echo "<hr>";
+      echo $p_name;
       echo "$count .";
       echo "<div><a href='./Products_1111/$p_link' style='text-decoration:none'>
-        <img src='$p_img' width='300px',height='300px' style='float:left;'>
+        <img src='./Products_1111/$p_name/$p_img' width='300px',height='300px' style='float:left;'>
         <h3 style='padding-left:420px;'>$p_name<h3>
         <h5 style='padding-left:420px;'>$p_desc<h5></a>
       </div><br><br><br><br>";
