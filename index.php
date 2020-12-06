@@ -231,13 +231,13 @@ function scrollFunction() {
 }
 </script>
 <div class="MagicScroll" bgcolor="white" data-options="autoplay: 1000; step: 1; mode: carousel; height: 275;">
-    <img src="sale1.jpg" />
-    <img src="sale2.jpg" />
-     <img src="sale3.png" />
-	 <img src="sale4.jpg" />
-	 <img src="sale5.jpg" />
-	 <img src="sale6.jpg" />
-	 <img src="sale7.jpg" />
+    <img src="images/sale1.jpg" />
+    <img src="images/sale2.jpg" />
+     <img src="images/sale3.png" />
+	 <img src="images/sale4.jpg" />
+	 <img src="images/sale5.jpg" />
+	 <img src="images/sale6.jpg" />
+	 <img src="images/sale7.jpg" />
 </div>
 
 <h2 align="center" >ELECTRONICS ITEMS</h2>
@@ -245,13 +245,13 @@ function scrollFunction() {
 <table border="5" allign ="center" width="100%" cellpadding="10px" cellspacing="10px">
 <tr align="center">
 <td  vallign="top"  style="font-family:Cursive" width=50%>
-<img src="tablet/tablet1.jpg" width="500px" height="500px">
+<img src="Products_1111/tablet/tablet1.jpg" width="500px" height="500px">
 <a href='tablet.php'><h3>LENOVO TABLET </h3></a>
 <p >18950 <div style="text-decoration:line-through">20,999</div></p>
 </td>
 <td vallign="top"  style="font-family:Cursive">
-<img src="img1.jpg">
-<a href="Products_1111/iphonex.php"><h3>Apple iphoneX</h3><a>
+<img src="images/img1.jpg">
+<a href="iphonex.php"><h3>Apple iphoneX</h3><a>
 <p >60,000 <div style="text-decoration:line-through">70,999</div></p>
 </td>
 <td>
@@ -262,12 +262,12 @@ function scrollFunction() {
 <table border="5" allign ="center" width="100%" cellpadding="10px" cellspacing="10px">
 <tr align="center">
 <td  vallign="top"  style="font-family:Cursive" width=50%>
-<img src="foggscent/foggscent2.jpg" width="500px" height="500px">
-<a href='foggscent.php'><h3>FOGG SCENT</h3></a>
+<img src="Products_1111/foggscent/foggscent2.jpg" width="500px" height="500px">
+<a href='Products_1111/foggscent.php'><h3>FOGG SCENT</h3></a>
 <p >99 <div style="text-decoration:line-through">199</div></p>
 </td>
 <td vallign="top"  style="font-family:Cursive">
-<img src="watches/watches1.jpg">
+<img src="Products_1111/watches/watches1.jpg">
 <a href='watches.php'><h3>Automatic Mens Chronograph Watch 116506</h3></a>
 <p >3,54,900 <div style="text-decoration:line-through">4,00,000</div></p>
 </td>
@@ -277,12 +277,12 @@ function scrollFunction() {
 <table border="5" allign ="center" width="100%" cellpadding="10px" cellspacing="10px">
 <tr align="center">
 <td  vallign="top"  style="font-family:Cursive" width=50%>
-<img src="schoolbag/schoolbag3.jpg" width="500px" height="500px">
+<img src="Products_1111/schoolbag/schoolbag3.jpg" width="500px" height="500px">
 <a href='schoolbag.php'><h3>School BAG</h3></a>
 <p >2450 <div style="text-decoration:line-through">2,999</div></p>
 </td>
 <td vallign="top"  style="font-family:Cursive">
-<img src="trollybag/trollybag2.jpg" width="500px" height="500px">
+<img src="Products_1111/trollybag/trollybag2.jpg" width="500px" height="500px">
 <a href='trollybag.php'><h3>TROLLY BAG</h3></a>
 <p >5000 <div style="text-decoration:line-through">4,999</div></p>
 </td>
