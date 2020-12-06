@@ -1,0 +1,43 @@
+
+body {
+font-family: Tahoma, Arial, sansserif;
+font-size: 13px;
+color: black;
+background: white;
+
+}
+marquee{
+	background:blue;
+}
+h1 {
+border-bottom: 1px solid black;
+color:yellow;
+background:blue;
+font-family:Cursive;
+}
+.shaded {
+background: #d0d0ff;
+}
+#navbar {
+  background-color: pink; /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: -50px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: pink;
+  color: black;
+}
+		
