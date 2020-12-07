@@ -246,12 +246,12 @@ function scrollFunction() {
 <tr align="center">
 <td  vallign="top"  style="font-family:Cursive" width=50%>
 <img src="Products_1111/tablet/tablet1.jpg" width="500px" height="500px">
-<a href='tablet.php'><h3>LENOVO TABLET </h3></a>
+<a href='Products_1111/tablet.php'><h3>LENOVO TABLET </h3></a>
 <p >18950 <div style="text-decoration:line-through">20,999</div></p>
 </td>
 <td vallign="top"  style="font-family:Cursive">
 <img src="images/img1.jpg">
-<a href="iphonex.php"><h3>Apple iphoneX</h3><a>
+<a href="Products_1111/iphonex.php"><h3>Apple iphoneX</h3><a>
 <p >60,000 <div style="text-decoration:line-through">70,999</div></p>
 </td>
 <td>
@@ -267,8 +267,8 @@ function scrollFunction() {
 <p >99 <div style="text-decoration:line-through">199</div></p>
 </td>
 <td vallign="top"  style="font-family:Cursive">
-<img src="Products_1111/watches/watches1.jpg">
-<a href='watches.php'><h3>Automatic Mens Chronograph Watch 116506</h3></a>
+<img src="Products_1111/watch/watches1.jpg">
+<a href='Products_1111/watch.php'><h3>Automatic Mens Chronograph Watch 116506</h3></a>
 <p >3,54,900 <div style="text-decoration:line-through">4,00,000</div></p>
 </td>
 </tr>
@@ -278,12 +278,12 @@ function scrollFunction() {
 <tr align="center">
 <td  vallign="top"  style="font-family:Cursive" width=50%>
 <img src="Products_1111/schoolbag/schoolbag3.jpg" width="500px" height="500px">
-<a href='schoolbag.php'><h3>School BAG</h3></a>
+<a href='Products_1111/schoolbag.php'><h3>School BAG</h3></a>
 <p >2450 <div style="text-decoration:line-through">2,999</div></p>
 </td>
 <td vallign="top"  style="font-family:Cursive">
 <img src="Products_1111/trollybag/trollybag2.jpg" width="500px" height="500px">
-<a href='trollybag.php'><h3>TROLLY BAG</h3></a>
+<a href='Products_1111/trollybag.php'><h3>TROLLY BAG</h3></a>
 <p >5000 <div style="text-decoration:line-through">4,999</div></p>
 </td>
 </tr>
