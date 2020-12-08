@@ -11,13 +11,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
 </head>
 <body style="text-align:center">
-    <h1 align="center" style="font-family:Cursive;color:white;background-color:#FE980F;font-size:50px">
-	    fIrSt ChOiCe
-	</h1>
+
 	<?php
 		require('../db.php');
 		include("../auth.php");
-
+    include("navbar.php");
 	?>
      <div class="container">
 

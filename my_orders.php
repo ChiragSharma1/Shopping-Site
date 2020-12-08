@@ -4,10 +4,10 @@
 my orders</title>
 </head>
 <body>
-<h1 align="center"style="font-size:50px;background-color:#FE9A2E;color:white">fIrSt ChOiCe</h1>
 <?php
 require('db.php');
 include("auth.php");
+include('navbar.php');
 $username=$_SESSION['username'];
 $query="SELECT * FROM orders WHERE username='$username'";
 $result=mysqli_query($con,$query);
@@ -53,20 +53,20 @@ while($row=mysqli_fetch_array($result))
 	$product_link=$row1['product_link'];
 	echo "<td><a href='$product_link'>view </a></td>";
 	echo "<td><input type='radio' value='$order_id' name='order_id' required/ ></td>";
-	echo "<td><input type='submit' value='cancel' name='cancel'/></td>";	
+	echo "<td><input type='submit' value='cancel' name='cancel'/></td>";
 	echo "</tr>";
 	echo "</br>";
-	
+
 }
 echo "</table>";
 echo "</form>";
 }
-else 
+else
 {
 	echo "<h1 align='center'> you have not ordered any item yet</h1>";
 }
 ?>
 <p align='center'><a href='index.php' >redirect to homepage</a></p>
- 
+
 </body>
 </html>
