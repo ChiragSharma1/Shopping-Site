@@ -53,10 +53,10 @@ nav .navbar_form{
   <nav>
     <div class= "navbar">
       <div class="navlinks">
-        <a href="../index.php">Home</a>
-      <a href="../mycart.php">My Cart</a>
-      <a href="../user_address.php">My Address</a>
-      <a href="../my_orders.php">My Orders</a>
+        <a href="index.php">Home</a>
+      <a href="mycart.php">My Cart</a>
+      <a href="user_address.php">My Address</a>
+      <a href="my_orders.php">My Orders</a>
       </div>
     </div>
   </nav>
