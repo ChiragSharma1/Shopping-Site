@@ -55,7 +55,7 @@ nav .navbar_form{
       <div class="navlinks">
         <a href="index.php">Home</a>
       <a href="mycart.php">My Cart</a>
-      <a href="user_address.php">My Address</a>
+      <a href="customer.php">My Address</a>
       <a href="my_orders.php">My Orders</a>
       </div>
     </div>

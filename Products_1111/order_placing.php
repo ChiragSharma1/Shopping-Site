@@ -4,10 +4,10 @@
 Buy_PAGE</title>
 </head>
 <body style="text-align:center">
-<h1 align="center"style="font-size:50px;background-color:#FE9A2E;color:white">fIrSt ChOiCe</h1>
 <?php
 require('../db.php');
 include("../auth.php");
+include('navbar.php');
 $username=$_SESSION['username'];
 
 $product_id=$_POST['product_id'];
@@ -16,7 +16,9 @@ $query="SELECT product_name,product_description,product_image,price FROM product
 $result=mysqli_query($con,$query);
 $row=mysqli_fetch_array($result);
 $price=$row['price'];
-
+if(!$quantity){
+	$quantity = 1;
+}
 echo "<table border='1' align='center' width='100%'>";
 
 
@@ -38,14 +40,14 @@ $row2 = mysqli_fetch_array($result2);
  else {
 $total=0;
 $total=$total+$quantity*$row['price'];
-echo"<p  align='right' style='font-size:30px'>TOTAL IS".$total."</p>";
+echo"<p  align='right' style='font-size:30px'>TOTAL IS ".$total."</p>";
 echo "<h1 align='center'>FILL THE BELOW FORM TO PLACE ORDER</h1></br>";
 $addresses=array();
 echo "<form class='form' action='order.php' method='post' >";
 echo "<input type='text' name='name' placeholder='name' align='center' style='width:300px;height:43px' required/></br>";
 
  echo "SELECT ADDRESS  <input type='text' name='product_id' value='$product_id' style='width:0%;height:0%' readonly><input type='text' name='price' value='$total' style='width:0%;height:0%' readonly><input type='text' name='quantity' value='$quantity' style='width:0%;height:0%' readonly><br/>";
-
+$result2 = mysqli_query($con,$query2);
 while ($row2 = mysqli_fetch_array($result2))
 	{
 		$flag = true;

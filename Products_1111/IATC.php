@@ -7,10 +7,10 @@
 		<link rel="stylesheet" href="style2.css" />
 	</head>
 <body>
-	<h1 align="center"style="font-size:50px;background-color:#FE9A2E;color:white">fIrSt ChOiCe</h1>
 	 <?php
-		require('db.php');
-		include("auth.php");
+		require('../db.php');
+		include("../auth.php");
+		include('navbar.php');
 			$quantity=1;
 			$username=$_SESSION['username'];
 			$product_id=$_POST['input'];
@@ -20,7 +20,7 @@
         if ($result) {
             echo "<div class='form'>
                   <h3 align='center'>Your item is added to cart</h3><br/>
-                  <p class='link' align='center'>Click here to <a href='index.php'>redirect to homepage</a></p>
+                  <p class='link' align='center'>Click here to view your cart <a href='../mycart.php'>redirect to My Cart</a></p>
                   </div>";
 		    echo'<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
 				<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
