@@ -44,13 +44,13 @@ while($rown1=mysqli_fetch_array($result))
 		while($rown2 = mysqli_fetch_array($result2))
 	{	echo "<tr>";
 		$product_image=$rown2['product_image'];
-        echo "<td style='width:300px;length:300px'><img src='$product_image' width='300px',height='300px'></td>";
+        echo "<td style='width:300px;length:300px'><img src='Products_1111/$product_image' width='300px',height='300px'></td>";
 		echo "<td>".$rown2['product_name']."</td>";
 		echo "<td>".$rown2['product_description']."</td>";
 		echo "<td>".$rown1['quantity']."</td>";
 		echo "<td>".$rown2['price']."</td>";
 		$product_link=$rown2['product_link'];
-		echo "<td><a href='$product_link'>view </a></td>";
+		echo "<td><a href='Products_1111/$product_link'>view </a></td>";
 		echo "</tr>";
 		echo "</br>";
 		$total=$total+$rown1['quantity']*$rown2['price'];
