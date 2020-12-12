@@ -72,12 +72,8 @@ include('auth.php');
 
  $query = "SELECT * FROM products
             WHERE products.product_name = '$search'";
-  //echo $query;
   $result = mysqli_query($con,$query);
   $value = mysqli_fetch_array($result);
-  // $str =  $value['product_link'];
-  // echo $search;
-
 
   if(!$value){
     echo '<center><h1>This Product is Not available as of Now , But we will try to get it soon on First Choice </h1>
@@ -87,14 +83,6 @@ include('auth.php');
 
   }
   else{
-
-    // header("location:http://localhost/shopping site/$str");
-    // echo "<center>Results are...<br><br>";
-    // echo "<table width='100%' >
-    // <tr><th>product_image</th>
-    // <th>product_name</th>
-    // <th>product_description</th>
-    // ";
     $count=1;
     $result = mysqli_query($con,$query);
     while($row1=mysqli_fetch_array($result)){
@@ -107,19 +95,13 @@ include('auth.php');
       $p_name = $value2['product_name'];
       $p_desc = $value2['product_description'];
       $p_link = $value2['product_link'];
-      // echo "<tr><a href= '$p_link'>";
-      // echo "<td style = 'width:300px length:300px'><img src='$p_img' width='300px',height='300px'></td>";
-      // echo "<td>$p_name</td>";
-      // echo "<td>$p_desc</td>";
-      // echo "</a></tr>";
-      // echo "<br>";
       echo "<hr>";
       echo "$count .";
       echo "<div><a href='./Products_1111/$p_link' style='text-decoration:none'>
-        <img src='./Products_1111/$p_img' width='300px',height='300px' style='float:left;'>
+        <img src='./Products_1111/$p_img' style='float:left; height:180px;width:260px;'>
         <h3 style='padding-left:420px;'>$p_name<h3>
         <h5 style='padding-left:420px;'>$p_desc<h5></a>
-      </div><br><br><br><br>";
+      </div><br><br><br><br><br><br>";
       echo "<hr>";
  $count = $count+1;
    }
