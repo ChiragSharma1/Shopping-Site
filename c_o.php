@@ -9,7 +9,7 @@
 require('db.php');
 include("auth.php");
 include('navbar.php');
-if($_POST['cancel']&&$_POST['order_id'])
+if($_POST['Cancel']&&$_POST['order_id'])
 {
 	$o_id=$_POST['order_id'];
 	$query2="DELETE FROM orders WHERE order_id='$o_id'";
