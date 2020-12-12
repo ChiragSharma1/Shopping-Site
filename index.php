@@ -215,7 +215,7 @@ function autocomplete(inp, arr) {
   });
 }
 
-var products = ["iPhone X","Alexa","Fogg Xtremo Scent","Boat Headphone","Apple MacBook Pro","School bag","ASICS Running Shoes","Lenove Tablet","Trolly Bag","Sony TV","Canon Camera","Watch","Yamaha Guitar"];
+var products = ["iPhone X","Alexa","Fogg Xtremo Scent","Boat Headphone","Apple MacBook Pro","School bag","ASICS Running Shoes","Lenovo Tablet","Trolly Bag","Sony TV","Canon Camera","Watch","Yamaha Guitar"];
 autocomplete(document.getElementById("myInput"), products);
 </script>
 
