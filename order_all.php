@@ -4,10 +4,10 @@
 Buy_PAGE</title>
 </head>
 <body style="text-align:center">
-<h1 align="center"style="font-size:50px;background-color:#FE9A2E;color:white">fIrSt ChOiCe</h1>
 <?php
 require('db.php');
 include("auth.php");
+include('navbar.php');
 $username=$_SESSION['username'];
 $query="SELECT product_id,quantity FROM cart WHERE username='$username'";
 $result= mysqli_query($con,$query);
@@ -34,7 +34,9 @@ while($row=mysqli_fetch_array($result))
 	}
 }
 ?>
-your orders are palced<br/>
-<a href='index.php'>redirect to homepage</a>
+<br><br><br>
+<br><br>;
+	<h1>Order placed successfully👍</h1></br>;
+	<h2>Thanks for Choosing First Choice , Enjoy Shopping 😊</h2>;
 </body>
 </html>
