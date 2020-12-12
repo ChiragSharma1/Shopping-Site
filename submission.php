@@ -63,8 +63,13 @@
 </html>
 <?php
 include('auth.php');
- $search = $_POST['search_value'];
  include('db.php');
+  $search = $_POST['search_value'];
+  if(!$search){
+    header('location:index.php');
+    exit;
+  }
+
  $query = "SELECT * FROM products
             WHERE products.product_name = '$search'";
   //echo $query;

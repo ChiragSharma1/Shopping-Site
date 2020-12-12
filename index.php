@@ -64,6 +64,12 @@ nav .navbar_form{
 
 #submitbtn{
   margin-left: 320px;
+  background-color: Blue;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 10px;
+  font-size: 16px;
 }
 input {
   border: 1px solid transparent;
@@ -76,13 +82,6 @@ input[type=text] {
   background-color: #f1f1f1;
   width: 100%;
 }
-
-input[type=submit] {
-  background-color: Blue;
-  color: #fff;
-  cursor: pointer;
-}
-
 .autocomplete-items {
   position: absolute;
   border: 1px solid #d4d4d4;
@@ -147,7 +146,7 @@ border:1px solid black
         <div class="autocomplete" style="width:300px;">
           <input id="myInput" type="text" name="search_value" placeholder="Search for Products..">
         </div>
-        <input id = "submitbtn"type="submit">
+        <button id = "submitbtn" type="submit">Search</button>
       </form>
     </div>
 
@@ -296,7 +295,7 @@ function scrollFunction() {
 
 </table>
 <center>
-<div class = "pgend"style="font-size:25px;background-color:black">
+<div class = "pgend"style="font-size:20px;background-color:black">
 <a href="dashboard.php" style="color:white;">Dashboard</a><br>
 <a href="logout.php" style="color:white;">Logout</a><br>
 <a href="user_address.php" style="color:white;">Add address</a>
