@@ -44,7 +44,7 @@ while($row=mysqli_fetch_array($result))
 	echo "<td >".$order_id."</td>";
 	echo "<td >".$row['name']."</td>";
 	$product_image=$row1['product_image'];
-    echo "<td style='width:300px;length:300px'><img src='$product_image' width='300px',height='300px'></td>";
+    echo "<td style='width:300px;length:300px'><img src='Products_1111/$product_image' width='300px',height='300px'></td>";
 	echo "<td>".$row1['product_name']."</td>";
 	echo "<td>".$row1['product_description']."</td>";
 	echo "<td>".$row['quantity']."</td>";
