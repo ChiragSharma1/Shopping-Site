@@ -63,10 +63,9 @@ echo "</form>";
 }
 else
 {
-	echo "<h1 align='center'> you have not ordered any item yet</h1>";
+	echo "<h1 align='center'> You have not ordered any item yet</h1>";
 }
 ?>
-<p align='center'><a href='index.php' >redirect to homepage</a></p>
 
 </body>
 </html>
