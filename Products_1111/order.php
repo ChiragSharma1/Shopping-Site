@@ -22,7 +22,7 @@ if($result1)
 {
   echo "<br><br>";
 	echo "<h1>Order placed successfully👍</h1></br>";
-	echo"<h2>Thanks for Choosing First Choice , Enjoy Shopping 😊";
+	echo"<h2>Thanks for Choosing First Choice , Enjoy Shopping 😊</h2>";
 }
 ?>
 </body>
