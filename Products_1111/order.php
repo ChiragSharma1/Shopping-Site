@@ -20,9 +20,11 @@ VALUES ('$username', '$product_id', '$name', '$quantity','$total1','$address','$
 $result1=mysqli_query($con,$query1);
 if($result1)
 {
+	$query="UPDATE products SET quantity=quantity-'$quantity' WHERE product_id='$product_id'";
+	$result=mysqli_query($con,$query);
   echo "<br><br>";
 	echo "<h1>Order placed successfully👍</h1></br>";
-	echo"<h2>Thanks for Choosing First Choice , Enjoy Shopping 😊";
+	echo"<h2>Thanks for Choosing First Choice , Enjoy Shopping 😊</h2>";
 }
 ?>
 </body>

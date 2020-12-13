@@ -14,24 +14,6 @@ $result=mysqli_query($con,$query);
 $resultm=mysqli_query($con,$query);
 if($rowm=mysqli_fetch_array($resultm))
 {
-echo "<form class='form' action='c_o.php' method='post' >";
- echo "<table border='1' align='center' text-align='center' width='100%'>
-<tr >
-<th>order_id</th>
-<th>name</th>
-<th>product_image</th>
-
-<th>product_name</th>
-
-<th>product_description</th>
-<th>quantity</th>
-<th>price</th>
-<th>address selected</th>
-<th>product link</th>
-
-</tr>
-
-";
 while($row=mysqli_fetch_array($result))
 {
 	$product_id=$row['product_id'];
@@ -39,34 +21,33 @@ while($row=mysqli_fetch_array($result))
 	$query1="SELECT product_image,product_name,product_description,product_link FROM products WHERE product_id='$product_id'";
 	$result1=mysqli_query($con,$query1);
 	$row1=mysqli_fetch_array($result1);
-	echo "<tr>";
 	$order_id=$row['order_id'];
-	echo "<td >".$order_id."</td>";
-	echo "<td >".$row['name']."</td>";
+	$name = $row['name'];
+	$p_name = $row1['product_name'];
+	$p_desc = $row1['product_description'];
+	$p_qty = $row['quantity'];
+	$p_price = $row['price'];
 	$product_image=$row1['product_image'];
-    echo "<td style='width:300px;length:300px'><img src='$product_image' width='300px',height='300px'></td>";
-	echo "<td>".$row1['product_name']."</td>";
-	echo "<td>".$row1['product_description']."</td>";
-	echo "<td>".$row['quantity']."</td>";
-	echo "<td>".$row['price']."</td>";
-	echo "<td>".$address."</td>";
-	$product_link=$row1['product_link'];
-	echo "<td><a href='$product_link'>view </a></td>";
-	echo "<td><input type='radio' value='$order_id' name='order_id' required/ ></td>";
-	echo "<td><input type='submit' value='cancel' name='cancel'/></td>";
-	echo "</tr>";
-	echo "</br>";
+	$p_link=$row1['product_link'];
+	echo "<div>
+		<a href='./Products_1111/$p_link' style='text-decoration:none'><img src='Products_1111/$product_image' style='float:left; height:200px;width:270px; padding-left:100px;'></a>
+		<h3 style='margin-right:450px;float:right;margin-top:10px'>$name</h3><h3 style='padding-left:420px;margin-top:20px'>$p_name</h3>
+		<h4 style='margin-right:300px;float:right'>$address</h4><h5 style='padding-left:420px;'>$p_desc<h5></a>
+		<h3 style='padding-left:420px;'> ₹ $p_price</h3>
+		<form class='form' action='c_o.php' method='post'>
+		<input value='$order_id' name = 'order_id' style='visibility:hidden'/>
+		<input type='submit' value = 'Cancel' name = 'Cancel' style='float:right;margin-right:20px;'/>
+		</form>
+      </div><br><br><br><br><hr>";
 
 }
-echo "</table>";
-echo "</form>";
+
 }
 else
 {
-	echo "<h1 align='center'> you have not ordered any item yet</h1>";
+	echo "<h1 align='center'> You have not ordered any item yet</h1>";
 }
 ?>
-<p align='center'><a href='index.php' >redirect to homepage</a></p>
 
 </body>
 </html>

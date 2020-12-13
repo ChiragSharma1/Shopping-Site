@@ -1,6 +1,14 @@
+<html>
+<head>
+<title>
+ address added
+</title>
+</head>
+<body style="text-align:center">
 <?php
 require('db.php');
 include("auth.php");
+include('navbar.php');
 // If form submitted, insert values into the database.
 if (isset($_SESSION['username'])){
         // removes backslashes
@@ -24,3 +32,5 @@ VALUES ('$username', '$address', '$city', '$state','$country','$pincode','$phone
         }
     }else{}
 ?>
+</body>
+</html>

@@ -14,7 +14,11 @@
 	<?php
 		require('../db.php');
 		include("../auth.php");
-    include('navbar.php');
+		include('navbar.php');
+		$queryn1="SELECT quantity FROM products WHERE product_id=1";
+		$resultn1=mysqli_query($con,$queryn1);
+		$rown1=mysqli_fetch_array($resultn1);
+		$quantity=$rown1['quantity'];
 	?>
      <div class="container">
 
@@ -48,16 +52,23 @@
 			 <p>Product Code:ISRC2020</p>
 			 <img src="star.png" class="stars">
 			 <p class="price"> Rs60,000</p>
-			 <p><b>Availability:</b> In Stock</p>
+			 <p><b>Availability:</b>  <?php if($quantity>0)
+			 {
+				echo "<b style='color:green'>IN stock</b>";
+			 }
+			 else 
+			 {
+				echo "<b style='color:red'>OUT of stock</b>";
+			 }?></p>
 			 <p><b>Condition:</b> New</p>
 			 <p><b>Brand:</b> Apple Company</p>
-			  <form class="form" action="order_placing.php" method="post">
-			 <label>Quantity:</label><input type="text"  style="width:30px;height:33px" name="quantity">
-			 <input type="text" name="product_id" value="1" style="width:0%;height:0%" readonly>
-			<input type="submit" name="submit" value="BUYNOW" class="login-button" style="width:150px"/></form>
-			 <form class="form" action="IATC.php" method="post">
-			<input type="text" name="input" value="1" style="width:0%;height:0%;font-size:0%" readonly>
-			<input type="submit" name="submit" value="ADD TO CART" class="login-button" style="width:150px"/></form>
+			 <?php  if($quantity>0){echo ' <form class="form" action="order_placing.php" method="post">
+			 <label>Quantity:</label><input type="number" min="1"  style="width:30px;height:33px" name="quantity">
+			 <input type="text" name="product_id" value="1" style="width:0%;height:0%;display:none" readonly>
+			<input type="submit" name="submit" value="BUYNOW" class="login-button" style="width:150px"/></form>';
+			 echo '<form class="form" action="IATC.php" method="post">
+			<input type="text" name="input" value="1" style="width:0%;height:0%;font-size:0%;display:none" readonly>
+			<input type="submit" name="submit" value="ADD TO CART" class="login-button" style="width:150px"/></form>';}?>
 	     </div>
 	     </div>
 		 </div>

@@ -5,7 +5,7 @@
 	CUSTOMER ADDRESS
 </title>
 </head>
-<body>
+<body style="text-align:center">
 <?php
 require('db.php');
 include("auth.php");
@@ -19,7 +19,7 @@ $ary = mysqli_fetch_array($result);
 if(!$ary){
 	echo "<center>";
 	echo "<h1>You have not added any address yet !!</h1>";
-	echo "<br><br><a href ='user_address.php'><h2>Add Your Address</h2></a></center>";
+	
 }
 else {
 	$result = mysqli_query($con,$query);
@@ -41,23 +41,34 @@ echo "<h1 align='CENTER'>YOURS ADDRESSES ARE</h1>";
 <th>email</th>
 
 </tr>";
+$i=0;
     while ($row = mysqli_fetch_array($result))
 	{	echo "<tr>";
         echo "<td>".$row['username']."</td>";
-		echo "<td>".$row['address']."</td>";
+		$address=$row['address'];
+		echo "<td>".$address."</td>";
 		echo "<td>".$row['city']."</td>";
 		echo "<td>".$row['state']."</td>";
 		echo "<td>".$row['country']."</td>";
 		echo "<td>".$row['pincode']."</td>";
-		echo "<td>".$row['phone']."</td>";
+		$phone=$row['phone'];
+		echo "<td>".$phone."</td>";
         echo "<td>".$row['email']."</td>";
+		echo "<form class='form$i' action='r_a.php' method='post' >";
+		echo "<td>
+		<input type='text' name='phone' value='$phone' style='width:0%;height:0%;display:none' readonly><input type='radio' value='$address' name='address' required/ ></td>";
+		echo "<td><input type='submit' value='remove' name='cancel'/></td>";
+		echo "</form>";
 		echo "</tr>";
 		echo "</br>";
+		$i=$i+1;
     }
 echo "</table>";
+
 }
 ?>
-
-
+<a href='user_address.php'>
+ADD another Address
+</a>
 </body>
 </html>

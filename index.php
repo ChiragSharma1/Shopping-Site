@@ -123,7 +123,7 @@ border:1px solid black
 <link type="text/css" rel="stylesheet" href="magicscroll.css"/>
 <script type="text/javascript" src="magicscroll.js"></script>
 </head>
-<body>
+<body style='text-align:center'>
 <!-- <script> alert("Welcome <?php echo $_SESSION['username']; ?>!") -->
 </script>
 <h1 id = "heading" align="center">fIrSt ChOiCe</h1>
@@ -245,29 +245,28 @@ function scrollFunction() {
 <table border="5" allign ="center" width="100%" cellpadding="10px" cellspacing="10px">
 <tr align="center">
 <td  vallign="top"  style="font-family:Cursive" width=50%>
-<img src="Products_1111/tablet/tablet1.jpg" width="500px" height="500px">
+<img src="Products_1111/tablet/tablet1.jpg" width="200px" height="200px">
 <a href='Products_1111/tablet.php'><h3>LENOVO TABLET </h3></a>
 <p >18950 <div style="text-decoration:line-through">20,999</div></p>
 </td>
 <td vallign="top"  style="font-family:Cursive">
-<img src="images/img1.jpg">
+<img src="images/img1.jpg" style="width:200px;height:200px">
 <a href="Products_1111/iphonex.php"><h3>Apple iphoneX</h3><a>
 <p >60,000 <div style="text-decoration:line-through">70,999</div></p>
 </td>
-<td>
-</td>
+
 </tr>
 </table>
 <h2 align="center">MEN'S ITEMS</h2>
 <table border="5" allign ="center" width="100%" cellpadding="10px" cellspacing="10px">
 <tr align="center">
 <td  vallign="top"  style="font-family:Cursive" width=50%>
-<img src="Products_1111/foggscent/foggscent2.jpg" width="500px" height="500px">
+<img src="Products_1111/foggscent/foggscent2.jpg" width="200px" height="200px">
 <a href='Products_1111/foggscent.php'><h3>FOGG SCENT</h3></a>
 <p >99 <div style="text-decoration:line-through">199</div></p>
 </td>
 <td vallign="top"  style="font-family:Cursive">
-<img src="Products_1111/watch/watches1.jpg">
+<img src="Products_1111/watch/watches1.jpg" width="200px" height="200px">
 <a href='Products_1111/watch.php'><h3>Automatic Mens Chronograph Watch 116506</h3></a>
 <p >3,54,900 <div style="text-decoration:line-through">4,00,000</div></p>
 </td>
@@ -277,20 +276,20 @@ function scrollFunction() {
 <table border="5" allign ="center" width="100%" cellpadding="10px" cellspacing="10px">
 <tr align="center">
 <td  vallign="top"  style="font-family:Cursive" width=50%>
-<img src="Products_1111/schoolbag/schoolbag3.jpg" width="500px" height="500px">
+<img src="Products_1111/schoolbag/schoolbag3.jpg" width="200px" height="200px">
 <a href='Products_1111/schoolbag.php'><h3>School BAG</h3></a>
 <p >2450 <div style="text-decoration:line-through">2,999</div></p>
 </td>
 <td vallign="top"  style="font-family:Cursive">
-<img src="Products_1111/trollybag/trollybag2.jpg" width="500px" height="500px">
+<img src="Products_1111/trollybag/trollybag2.jpg" width="200px" height="200px">
 <a href='Products_1111/trollybag.php'><h3>TROLLY BAG</h3></a>
 <p >5000 <div style="text-decoration:line-through">4,999</div></p>
 </td>
 </tr>
 
 </table>
-<div style="font-size:25px;background-color:#FE9A2E">
-<p><a href="dashboard.php" style="color:white;font-family:cursive">Dashboard</a></p>
+<div style="font-size:25px;background-color:black">
+
 <a href="logout.php" style="color:white;font-family:cursive">Logout</a></br>
 <a href="user_address.php" style="color:white;font-family:cursive">Add address</a>
 </div>

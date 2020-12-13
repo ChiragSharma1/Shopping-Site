@@ -4,10 +4,10 @@
 Buy_PAGE</title>
 </head>
 <body style="text-align:center">
-<h1 align="center"style="font-size:50px;background-color:#FE9A2E;color:white">fIrSt ChOiCe</h1>
 <?php
 require('db.php');
 include("auth.php");
+include('navbar.php');
 $username=$_SESSION['username'];
 $query="SELECT product_id,quantity FROM cart WHERE username='$username'";
 $result= mysqli_query($con,$query);
@@ -17,7 +17,16 @@ $payment=$_POST['payment_method'];
 while($row=mysqli_fetch_array($result))
 {
 	$product_id=$row['product_id'];
+	$querym1="SELECT quantity FROM products WHERE product_id='$product_id'";
+		$resultm1=mysqli_query($con,$querym1);
+		$rowm1=mysqli_fetch_array($resultm1);
+		$quantitym1=$rowm1['quantity'];
+		
 	$quantity=$row['quantity'];
+	if($quantitym1<$quantity)
+	{
+		continue;
+	}
 	$query2="SELECT price FROM products WHERE product_id='$product_id'";
 	$result2= mysqli_query($con,$query2);
 	$row2=mysqli_fetch_array($result2);
@@ -30,11 +39,15 @@ while($row=mysqli_fetch_array($result))
 	{
 		$query3="DELETE FROM cart WHERE username='$username' AND product_id='$product_id'";
 		$result3=mysqli_query($con,$query3);
+		$querypq="UPDATE products SET quantity=quantity-'$quantity' WHERE product_id='$product_id'";
+	$resultpq=mysqli_query($con,$querypq);
 		
 	}
 }
 ?>
-your orders are palced<br/>
-<a href='index.php'>redirect to homepage</a>
+<br><br><br>
+<br><br>;
+	<h1>Order placed successfully👍</h1></br>;
+	<h2>Thanks for Choosing First Choice , Enjoy Shopping 😊</h2>;
 </body>
 </html>
