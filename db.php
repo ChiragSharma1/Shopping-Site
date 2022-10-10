@@ -1,7 +1,7 @@
 <?php
 // Enter your Host, username, password, database below.
 // I left password empty because i do not set password on localhost.
-$con = mysqli_connect("localhost","root","","ssfd");
+$con = mysqli_connect("sql6.freesqldatabase.com","sql6525607","","IKR7hHlKpZ");
 // Check connection
 if (mysqli_connect_errno())
   {
